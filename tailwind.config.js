@@ -14,6 +14,10 @@ module.exports = {
 				round: ['Nunito', 'Varela Round', 'Trebuchet MS'],
 				square: ['Helvetica', 'sans-serif'],
 				mono: ['Consolas', 'Courier New']
+			},
+			screens: {
+				xs: '300px',
+				phone: '500px'
 			}
 		}
 	},
