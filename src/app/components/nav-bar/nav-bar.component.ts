@@ -15,6 +15,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faBuilding } from '@fortawesome/free-regular-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { Router } from '@angular/router';
 @Component({
 	selector: 'coop-nav-bar',
 	templateUrl: './nav-bar.component.html',
@@ -33,11 +34,11 @@ export class NavBarComponent implements OnInit {
 	faUser = faUser;
 	faMusic = faMusic;
 	faSchool = faSchool;
-	faFilePdf= faFilePdf;
+	faFilePdf = faFilePdf;
 	faDownload = faDownload;
 
 	mobileMenu: HTMLElement | null | undefined;
-	constructor() {}
+	constructor(private router: Router) {}
 
 	ngOnInit(): void {}
 
@@ -47,5 +48,10 @@ export class NavBarComponent implements OnInit {
 
 	toggleMobileMenu(): void {
 		this.mobileMenu?.classList.toggle('hidden');
+	}
+
+	toPage(route: "" | "about" | "projects" | 'experience' | 'contact'):void {
+		this.mobileMenu?.classList.toggle('hidden');
+		this.router.navigateByUrl(route);
 	}
 }

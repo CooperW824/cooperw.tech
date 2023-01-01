@@ -49,7 +49,9 @@
 			<div
 				class="flex items-center justify-center w-[50px] h-full ml-4 sm:ml-0"
 			>
-				<img src="../../../assets/CWLogo.png" class="h-12 w-12" />
+				<a (click)="toPage('')">
+					<img src="../../../assets/CWLogo.png" class="h-12 w-12" />
+				</a>
 			</div>
 			<button
 				class="outline-none mobile-menu-button"
@@ -65,70 +67,72 @@
 		</div>
 		<div
 			class="h-screen w-full bg-coop-background flex flex-col items-center justify-center"
-		>	
-		<div class=" flex items-center justify-around w-full">
-			<a class="card" routerLink="/about">
-				<div class="h-5/6 w-5/6 flex items-center justify-around">
-					<fa-icon [icon]="faUser" size="6x"></fa-icon>
-				</div>
-				<div
-					class="flex items-center justify-center w-full border-2 rounded-md border-coop-highlight h-1/6"
-				>
-					<h1>About Me</h1>
-				</div>
-			</a>
-			<a class="card" routerLink="/projects">
-				<div class="h-5/6 w-5/6 flex items-center justify-around">
-					<fa-icon [icon]="faFileCode" size="3x"></fa-icon>
-					<fa-icon [icon]="faGithub" size="3x"></fa-icon>
-				</div>
-				<div
-					class="flex items-center justify-center w-full border-2 rounded-md border-coop-highlight h-1/6"
-				>
-					<h1>My Projects</h1>
-				</div>
-			</a>
+		>
+			<div class="flex items-center justify-around w-full">
+				<a class="card" (click)="toPage('about')">
+					<div class="h-5/6 w-5/6 flex items-center justify-around">
+						<fa-icon [icon]="faUser" size="6x"></fa-icon>
+					</div>
+					<div
+						class="flex items-center justify-center w-full border-2 rounded-md border-coop-highlight h-1/6"
+					>
+						<h1>About Me</h1>
+					</div>
+				</a>
+				<a class="card" (click)="toPage('projects')">
+					<div class="h-5/6 w-5/6 flex items-center justify-around">
+						<fa-icon [icon]="faFileCode" size="3x"></fa-icon>
+						<fa-icon [icon]="faGithub" size="3x"></fa-icon>
+					</div>
+					<div
+						class="flex items-center justify-center w-full border-2 rounded-md border-coop-highlight h-1/6"
+					>
+						<h1>My Projects</h1>
+					</div>
+				</a>
+			</div>
 
-		</div>
-
-		<div class="flex items-center justify-around w-full py-8">
-			<a class="card" routerLink="/experience">
-				<div class="h-5/6 w-5/6 flex items-center justify-around">
-					<fa-icon [icon]="faCode" size="3x"></fa-icon>
-					<fa-icon [icon]="faBuilding" size="3x"></fa-icon>
-				</div>
-				<div
-					class="flex items-center justify-center w-full border-2 rounded-md border-coop-highlight h-1/6"
+			<div class="flex items-center justify-around w-full py-8">
+				<a class="card" (click)="toPage('experience')">
+					<div class="h-5/6 w-5/6 flex items-center justify-around">
+						<fa-icon [icon]="faCode" size="3x"></fa-icon>
+						<fa-icon [icon]="faBuilding" size="3x"></fa-icon>
+					</div>
+					<div
+						class="flex items-center justify-center w-full border-2 rounded-md border-coop-highlight h-1/6"
+					>
+						<h1>Work Experience</h1>
+					</div>
+				</a>
+				<a class="card" (click)="toPage('contact')">
+					<div class="h-5/6 w-5/6 flex items-center justify-around">
+						<fa-icon [icon]="faPhone" size="3x"></fa-icon>
+						<fa-icon [icon]="faEnvelope" size="3x"></fa-icon>
+					</div>
+					<div
+						class="flex items-center justify-center w-full border-2 rounded-md border-coop-highlight h-1/6"
+					>
+						<h1>Contact Me</h1>
+					</div>
+				</a>
+			</div>
+			<div class="flex items-center justify-around w-full">
+				<a
+					class="card"
+					href="../../../assets/downloadables/CooperWernerResume2022.pdf"
 				>
-					<h1>Work Experience</h1>
-				</div>
-			</a>
-			<a class="card" routerLink="/contact">
-				<div class="h-5/6 w-5/6 flex items-center justify-around">
-					<fa-icon [icon]="faPhone" size="3x"></fa-icon>
-					<fa-icon [icon]="faEnvelope" size="3x"></fa-icon>
-				</div>
-				<div
-					class="flex items-center justify-center w-full border-2 rounded-md border-coop-highlight h-1/6"
-				>
-					<h1>Contact Me</h1>
-				</div>
-			</a>
-		</div>
-		<div class="flex items-center justify-around w-full">
-			<a class="card" href="../../../assets/downloadables/CooperWernerResume2022.pdf">
-				<div class="h-5/6 w-5/6 flex items-center justify-around">
-					<fa-icon [icon]="faDownload" size="3x"></fa-icon>
-					<fa-icon [icon]="faFilePdf" size="3x"></fa-icon>
-				</div>
-				<div
-					class="flex items-center justify-center w-full border-2 rounded-md border-coop-highlight h-1/6"
-				>
-					<h1>Resume</h1>
-				</div>
-			</a>
-		</div>
-		<div class="pb-16 phone:hidden"></div>
+					<div class="h-5/6 w-5/6 flex items-center justify-around">
+						<fa-icon [icon]="faDownload" size="3x"></fa-icon>
+						<fa-icon [icon]="faFilePdf" size="3x"></fa-icon>
+					</div>
+					<div
+						class="flex items-center justify-center w-full border-2 rounded-md border-coop-highlight h-1/6"
+					>
+						<h1>Resume</h1>
+					</div>
+				</a>
+			</div>
+			<div class="pb-16 phone:hidden"></div>
 		</div>
 		<coop-footer
 			class="fixed bottom-0 left-0 w-full flex flex-col h-16"
