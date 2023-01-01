@@ -1,3 +1,7 @@
 .card {
-	@apply w-1/3 aspect-square flex flex-col bg-coop-highlight items-center justify-between rounded-md shadow-md font-round font-bold text-base hover:w-1/2 transition-all hover:text-xl md:hover:text-2xl lg:hover:text-3xl xl:hover:text-2xl 2xl:hover:text-3xl hover:bg-coop-background hover:text-coop-highlight whitespace-nowrap;
+	@apply w-1/3 aspect-square flex flex-col bg-coop-highlight items-center justify-between rounded-md shadow-md font-round font-bold text-base hover:w-1/2 transition-all hover:text-xl md:hover:text-2xl lg:hover:text-3xl xl:hover:text-2xl 2xl:hover:text-3xl hover:bg-coop-background hover:text-coop-highlight whitespace-nowrap text-coop-text-dark;
+}
+
+.link {
+	@apply rounded-full bg-coop-highlight text-coop-text-dark py-2 px-4 text-3xl sm:text-base font-bold hover:py-[5px] hover:px-[13px] hover:bg-coop-background hover:text-coop-highlight hover:border-[3px] border-coop-highlight transition-colors font-round mx-2 w-fit whitespace-nowrap h-fit;
 }

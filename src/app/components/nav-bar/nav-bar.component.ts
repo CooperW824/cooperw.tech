@@ -9,7 +9,9 @@ import {
 	faLaptopCode,
 	faUser,
 	faMusic,
-	faSchool
+	faSchool,
+	faFilePdf,
+	faDownload
 } from '@fortawesome/free-solid-svg-icons';
 import { faBuilding } from '@fortawesome/free-regular-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -31,6 +33,8 @@ export class NavBarComponent implements OnInit {
 	faUser = faUser;
 	faMusic = faMusic;
 	faSchool = faSchool;
+	faFilePdf= faFilePdf;
+	faDownload = faDownload;
 
 	mobileMenu: HTMLElement | null | undefined;
 	constructor() {}
@@ -42,8 +46,6 @@ export class NavBarComponent implements OnInit {
 	}
 
 	toggleMobileMenu(): void {
-		console.log('test');
-		console.log(this.mobileMenu);
 		this.mobileMenu?.classList.toggle('hidden');
 	}
 }

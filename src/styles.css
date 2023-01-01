@@ -10,6 +10,3 @@
 	src: url('assets/fonts/Varela-Round/VarelaRound-Regular.ttf');
 }
 
-.link {
-	@apply rounded-full bg-coop-highlight text-coop-text-dark py-2 px-4 text-3xl sm:text-base font-bold hover:py-[5px] hover:px-[13px] hover:bg-coop-background hover:text-coop-highlight hover:border-[3px] border-coop-highlight transition-colors font-round mx-2 w-fit whitespace-nowrap h-fit;
-}
