@@ -50,7 +50,7 @@ export class NavBarComponent implements OnInit {
 		this.mobileMenu?.classList.toggle('hidden');
 	}
 
-	toPage(route: "" | "about" | "projects" | 'experience' | 'contact'):void {
+	toPage(route: '' | 'about' | 'projects' | 'experience' | 'contact'): void {
 		this.mobileMenu?.classList.toggle('hidden');
 		this.router.navigateByUrl(route);
 	}

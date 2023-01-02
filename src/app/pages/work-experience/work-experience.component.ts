@@ -7,9 +7,8 @@ import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
 	styleUrls: ['./work-experience.component.css']
 })
 export class WorkExperienceComponent implements OnInit {
-
 	faLaptopCode = faLaptopCode;
-	
+
 	constructor() {}
 
 	ngOnInit(): void {}
