@@ -11,7 +11,8 @@ import {
 	faMusic,
 	faSchool,
 	faFilePdf,
-	faDownload
+	faDownload,
+	faHome
 } from '@fortawesome/free-solid-svg-icons';
 import { faBuilding } from '@fortawesome/free-regular-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -36,6 +37,7 @@ export class NavBarComponent implements OnInit {
 	faSchool = faSchool;
 	faFilePdf = faFilePdf;
 	faDownload = faDownload;
+	faHome = faHome;
 
 	mobileMenu: HTMLElement | null | undefined;
 	constructor(private router: Router) {}
