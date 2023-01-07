@@ -1,126 +1,110 @@
 <div
-	class="flex items-center justify-center w-full bg-coop-background font-round h-fit p-4"
+	class="flex flex-col justify-between h-screen bg-coop-background flex-grow-0 flex-shrink basis-auto"
 >
-	<div class="w-full 2xl:w-7/12 flex flex-col items-center justify-center">
-		<div class="w-full flex items-center flex-col justify-center mb-2">
-			<h2 class="text-xl text-coop-text-paragraph">
-				To describe myself briefly: I am a...
-			</h2>
-			<h1 class="text-2xl phone:text-3xl text-coop-highlight">
-				Student. Developer. Leader.
-			</h1>
-		</div>
+	<coop-nav-bar class="h-16 w-full"></coop-nav-bar>
 
+	<div
+		class="flex items-center justify-center w-full bg-coop-background font-round h-fit p-4 felx-grow flex-shrink basis-auto"
+	>
 		<div
-			class="w-full flex flex-col sm:flex-row items-center justify-around"
+			class="w-full  flex flex-col items-center justify-center"
 		>
-			<div
-				class="w-11/12 pb-4 sm:pb-0 sm:w-[500px] flex items-center text-center sm:items-start sm:text-left justify-center flex-col mx-6"
-			>
-				<h2 class="text-2xl text-coop-text-header text-center w-full">
-					Student:
+			<div class="w-full flex items-center flex-col justify-center mb-2">
+				<h2 class="text-xl text-coop-text-paragraph">
+					To describe myself briefly: I am a...
 				</h2>
-				<p
-					class="text-base text-coop-text-paragraph indent-4 sm:indent-8 pb-2 w-full"
-				>
-					I am a high school Computer Science student. I have an
-					unweighted GPA of 3.92/4.00, and anticpate graduating in
-					2023. I have taken valuable courses for a career in STEM
-					like:
-				</p>
-				<div class="flex items-center justify-center w-full">
-					<ul
-						class="text-xl text-coop-text-paragraph list-disc whitespace-nowrap"
-					>
-						<li>AP Calculus 1 & 2 (A)</li>
-						<li>AP Computer Science A (A)</li>
-						<li>Advanced Physics (A)</li>
-						<li>Honors Cybersecurity (A)</li>
-					</ul>
-				</div>
+				<h1 class="text-2xl phone:text-3xl text-coop-highlight">
+					Student. Developer. Leader.
+				</h1>
 			</div>
+
 			<div
-				class="w-11/12 pb-4 sm:pb-0 sm:w-[500px] flex items-center text-center sm:items-start sm:text-left justify-center flex-col mx-6"
+				class="w-full flex flex-col lg:flex-row items-center lg:items-start justify-around"
 			>
-				<h2 class="text-2xl text-coop-text-header text-center w-full">
-					Developer:
-				</h2>
-				<p
-					class="text-base text-coop-text-paragraph indent-4 sm:indent-8 pb-2"
+				<div
+					class="pb-4 sm:pb-0 sm:w-[500px] flex items-center text-center sm:items-start sm:text-left justify-center flex-col mx-6 w-full"
 				>
-					I have loved programming ever since I joined my local
-					robotics club and realized that programming allowed me to
-					make whatever I can imagine. I have acquired a diverse
-					skillset from both my projects and work experience.
-				</p>
-				<h2 class="text-xl text-coop-text-header text-center w-full">
-					Some of my skills:
-				</h2>
-
-				<div class="flex items-center justify-center">
-
-					<div
-						class="flex items-center justify-between w-full phone:w-10/12 my-1 flex-wrap"
+					<h2
+						class="text-2xl text-coop-text-header text-center w-full"
 					>
-						<p
-							class="skill-card"
+						Student:
+					</h2>
+					<p
+						class="text-base text-coop-text-paragraph indent-4 sm:indent-8 pb-2 w-full"
+					>
+						I am a high school Computer Science student. I have an
+						unweighted GPA of 3.92/4.00, and anticpate graduating in
+						2023. I have taken valuable courses for a career in STEM
+						like:
+					</p>
+					<div class="flex items-center justify-center w-full">
+						<ul
+							class="text-xl text-coop-text-paragraph list-disc whitespace-nowrap"
 						>
-							Python
-						</p>
-						<p
-							class="skill-card"
-						>
-							C/C++
-						</p>
-						<p
-							class="skill-card"
-						>
-							JS/TS
-						</p>
-						<p
-							class="skill-card"
-						>
-							C#
-						</p>
-						<p
-								class="skill-card"
-							>
-								Angular
-							</p>
-							
-							<p
-								class="skill-card"
-							>
-								Ras Pi
-							</p>
-							<p
-								class="skill-card"
-							>
-								Arduino
-							</p>
-							<p
-								class="skill-card"
-							>
-								AWS
-							</p>
+							<li>AP Calculus 1 & 2 (A)</li>
+							<li>AP Computer Science A (A)</li>
+							<li>Advanced Physics (A)</li>
+							<li>Honors Cybersecurity (A)</li>
+						</ul>
 					</div>
 				</div>
-			</div>
-				</div>
+				<div
+					class="w-11/12 pb-4 lg:pb-0 sm:w-[500px] flex items-center text-center sm:items-start sm:text-left justify-center flex-col py-6 lg:py-0 px-6 border-y-2 border-coop-highlight lg:border-x-2 lg:border-y-0"
+				>
+					<h2
+						class="text-2xl text-coop-text-header text-center w-full"
+					>
+						Developer:
+					</h2>
+					<p
+						class="text-base text-coop-text-paragraph indent-4 sm:indent-8 pb-2"
+					>
+						I have loved programming ever since I joined my local
+						robotics club and realized that programming allowed me
+						to make whatever I can imagine. I have acquired a
+						diverse skillset from both my projects and work
+						experience.
+					</p>
+					<h2
+						class="text-xl text-coop-text-header text-center w-full"
+					>
+						Some of my skills:
+					</h2>
 
-		<div class="w-10/12 flex flex-col items-center justify-center">
-			<h2 class="text-2xl text-coop-text-header text-center w-full">
-				Leader:
-			</h2>
-			<p
-				class="text-base text-coop-text-paragraph indent-4 sm:indent-8 text-center"
-			>
-				I am an active leader in my community, I led my scout troop as
-				Senior Patrol Leader for multiple terms, and earned my Eagle
-				Scout in 2021. I also served a term as the president of my
-				school's Hack Club, growing club membership from 8 to 24 members
-				and teaching students how to code.
-			</p>
+					<div class="flex items-center justify-center">
+						<div
+							class="flex items-center justify-between w-full phone:w-10/12 my-1 flex-wrap"
+						>
+							<p class="skill-card">Python</p>
+							<p class="skill-card">C/C++</p>
+							<p class="skill-card">JS/TS</p>
+							<p class="skill-card">C#</p>
+							<p class="skill-card">Angular</p>
+
+							<p class="skill-card">Ras Pi</p>
+							<p class="skill-card">Arduino</p>
+							<p class="skill-card">AWS</p>
+						</div>
+					</div>
+				</div>
+				<div class="w-11/12 pb-4 sm:pb-0 sm:w-[500px] flex items-center text-center sm:items-start sm:text-left justify-center flex-col mx-6">
+					<h2 class="text-2xl text-coop-text-header text-center w-full">
+						Leader:
+					</h2>
+					<p
+						class="text-base text-coop-text-paragraph indent-4 sm:indent-8 text-center"
+					>
+						I am an active leader in my community, I led my scout troop
+						as Senior Patrol Leader for multiple terms, and earned my
+						Eagle Scout in 2021. I also served a term as the president
+						of my school's Hack Club, growing club membership from 8 to
+						24 members and teaching students how to code.
+					</p>
+				</div>
+			</div>
+
 		</div>
 	</div>
+	<coop-card-bar class="hidden sm:flex h-56 2xl:h-80 w-full"></coop-card-bar>
+	<coop-footer class="h-16 w-full"></coop-footer>
 </div>
