@@ -4,16 +4,27 @@
 	<coop-nav-bar class="h-16 w-full"></coop-nav-bar>
 
 	<div
-		class="flex items-center justify-center w-full bg-coop-background font-round h-fit p-4 flex-grow flex-shrink basis-auto"
+		class="flex flex-col items-center justify-around w-full bg-coop-background font-round h-fit p-4 flex-grow flex-shrink basis-auto"
 	>
+		<h1 class="text-4xl text-coop-highlight w-full text-center">
+			I have a variety of professional experiences
+		</h1>
 		<div
-			class="w-full 2xl:w-7/12 flex flex-col items-center justify-around text-coop-highlight text-center"
+			class="w-full lg:w-2/3 xl:w-1/2 h-5/6 flex flex-col sm:flex-row items-center justify-around"
 		>
-			<fa-icon [icon]="faLaptopCode" size="6x"></fa-icon>
-			<h1 class="text-6xl">
-				Hiya! This page is still under development, but don't worry! It
-				will be available soon!
-			</h1>
+			<div
+				class="w-11/12 sm:w-1/5 h-16 sm:h-full my-2 sm:my-0 flex sm:flex-col items-center justify-around"
+			>
+				<div
+					*ngFor="let job of jobs"
+					id="{{ job.company }}Button"
+					class="job-button"
+					(click)="open(job.company)"
+				>
+					<h1>{{ job.company }}</h1>
+				</div>
+			</div>
+			<div class="w-11/12 sm:w-3/4 h-full border-2 my-2 sm:my-0"></div>
 		</div>
 	</div>
 
