@@ -7,11 +7,13 @@ interface reference {
 }
 
 interface experience {
+	buttonName: string;
 	company: string;
-	// title: string;
-	// keyRoles: string[];
-	// skills: string[];
-	// references: reference[]
+	timeline: string;
+	title: string;
+	keyRoles: string[];
+	skills: string[];
+	references: reference[];
 }
 
 @Component({
@@ -22,13 +24,93 @@ interface experience {
 export class WorkExperienceComponent implements OnInit {
 	jobs: experience[] = [
 		{
-			company: 'TechSlice'
+			buttonName: 'TechSlice',
+			company: 'TechSlice',
+			timeline: 'August 2022 - Present',
+			title: 'Software Engineering Intern',
+			keyRoles: [
+				'Develop web-based user interfaces in NextJS and Angular',
+				'Connect user interfaces with AWS resources using AWS Amplify',
+				'Integrate third-party systems like ArcGIS to add functionality to apps'
+			],
+			skills: [
+				'AWS Amplify',
+				'NextJS',
+				'Angular',
+				'TailwindCSS',
+				'AWS Lambda',
+				'AWS DynamoDB',
+				'AWS AppSync'
+			].sort(),
+			references: [
+				{
+					name: 'Juliana Buonanno',
+					title: 'CEO',
+					email: 'julianna@techslice.com'
+				},
+				{
+					name: 'Mathew Lim',
+					title: 'CTO',
+					email: 'mathew@techslice.com'
+				}
+			]
 		},
 		{
-			company: 'Bellese'
+			buttonName: 'Bellese',
+			company: 'Bellese Technologies',
+			title: 'Software Engineering Intern',
+			keyRoles: [
+				'Worked on the Medicare Pricing System Modernization (MPSM) Project',
+				'Contributed to documentation and organization items',
+				'Worked with teams spanning multiple companies.'
+			],
+			timeline: 'July 2022 - August 2022',
+			skills: ['Java', 'Agile', 'Confluence'],
+			references: [
+				{
+					name: 'Marion Haas',
+					title: 'MPSM Project Manager',
+					email: 'marion.sa.haas@gmail.com'
+				},
+				{
+					name: 'Brendan Martin',
+					title: 'MPSM Scrum Master and Delivery Manager',
+					email: 'bmartin@bellese.io'
+				},
+				{
+					name: 'Pere Ozogu',
+					title: 'Full-Stack Software Engineer',
+					email: 'pozogu@bellese.io'
+				}
+			]
 		},
 		{
-			company: 'SMR'
+			buttonName: 'SMR',
+			company: 'Software, Magic, and Rainbows',
+			title: 'Software Engineering Intern',
+			keyRoles: [
+				'Develop plugins designed to read USB data for hobbits',
+				'Give weekly updates about my progress on my plugins',
+				'Deploy my code using Git, GitHub, and GitHub Actions'
+			],
+			timeline: 'June 2021 - August 2021',
+			skills: [
+				'QT',
+				'C++',
+				'Git',
+				'GitHub',
+				'Linux',
+				'GCC',
+				'GDB',
+				'USB'
+			].sort(),
+			references: [
+				{
+					name: 'Adam Nash',
+					title: 'Owner',
+					email: 'adam@smr.llc'
+				}
+			]
 		}
 	];
 
@@ -41,6 +123,8 @@ export class WorkExperienceComponent implements OnInit {
 	ngAfterViewChecked(): void {
 		let buttonElm = document.getElementById(this.previousButton);
 		buttonElm?.classList.add('selected');
+		let displayElm = document.getElementById(this.previousWorkDisplay);
+		displayElm?.classList.add('activeDisplay');
 	}
 
 	open(company: string): void {
@@ -52,5 +136,10 @@ export class WorkExperienceComponent implements OnInit {
 		buttonElm = document.getElementById(this.previousButton);
 		buttonElm?.classList.toggle('selected');
 		this.previousButton = button;
+		let displayElm = document.getElementById(display);
+		displayElm?.classList.toggle('activeDisplay');
+		displayElm = document.getElementById(this.previousWorkDisplay);
+		displayElm?.classList.toggle('activeDisplay');
+		this.previousWorkDisplay = display;
 	}
 }

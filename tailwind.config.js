@@ -18,6 +18,9 @@ module.exports = {
 			screens: {
 				xs: '300px',
 				phone: '500px'
+			},
+			fontSize: {
+				xll: '1.4rem'
 			}
 		}
 	},

@@ -2,6 +2,6 @@
 	@apply border-b-4 border-coop-highlight bg-coop-highlight bg-opacity-25;
 }
 
-.job-button {
-	@apply text-coop-text-header w-1/4 text-center text-xl hover:bg-coop-highlight hover:bg-opacity-25 h-4/6 sm:h-fit sm:py-2 rounded-lg transition-all duration-75 flex items-center justify-center px-2;
+.activeDisplay {
+	@apply flex;
 }
