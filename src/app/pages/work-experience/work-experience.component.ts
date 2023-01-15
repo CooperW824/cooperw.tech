@@ -49,9 +49,9 @@ export class WorkExperienceComponent implements OnInit {
 					email: 'juliana@techslice.com'
 				},
 				{
-					name: 'Mathew Lim',
+					name: 'Matthew Lim',
 					title: 'CTO',
-					email: 'mathew@techslice.com'
+					email: 'matthew@techslice.com'
 				}
 			]
 		},
