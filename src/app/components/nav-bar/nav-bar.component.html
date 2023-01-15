@@ -21,8 +21,7 @@
 		<a routerLink="/experience" class="link">My Career</a>
 		<a
 			class="link"
-			href="../../../assets/downloadables/CooperWernerResume2022.pdf"
-			download=""
+			href="/resume"
 			>Resume</a
 		>
 	</div>
@@ -128,11 +127,10 @@
 						<h1>Contact Me</h1>
 					</div>
 				</div>
-				<a
+				<div
 					id="ResumeDownload"
 					class="card"
-					href="../../../assets/downloadables/CooperWernerResume2022.pdf"
-					download=""
+					(click)="toPage('resume')"
 				>
 					<div class="h-5/6 w-5/6 flex items-center justify-around">
 						<fa-icon [icon]="faDownload" size="3x"></fa-icon>
@@ -143,7 +141,7 @@
 					>
 						<h1>Resume</h1>
 					</div>
-				</a>
+				</div>
 			</div>
 			<div class="pb-16 phone:hidden"></div>
 		</div>
