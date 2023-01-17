@@ -4,19 +4,110 @@
 	<coop-nav-bar class="h-16 w-full"></coop-nav-bar>
 
 	<div
-		class="flex items-center justify-center w-full bg-coop-background font-round h-fit p-4 flex-grow flex-shrink basis-auto"
+		class="flex flex-col items-center justify-around w-full bg-coop-background font-round px-4 flex-grow flex-shrink basis-auto"
 	>
+		<h1 class="text-4xl text-coop-highlight w-full text-center mt-2">
+			My Experience Brings Value from Day One.
+		</h1>
 		<div
-			class="w-full 2xl:w-7/12 flex flex-col items-center justify-around text-coop-highlight text-center"
+			class="w-full lg:w-4/5 xl:w-2/3 h-5/6 min-h-fit flex flex-col sm:flex-row items-center justify-start my-4"
 		>
-			<fa-icon [icon]="faLaptopCode" size="6x"></fa-icon>
-			<h1 class="text-6xl">
-				Hiya! This page is still under development, but don't worry! It
-				will be available soon!
-			</h1>
+			<div
+				class="jobs-list w-11/12 sm:w-1/5 min-h-fit h-16 sm:h-full mb-2 sm:my-0 flex sm:flex-col items-center justify-around flex-wrap"
+			>
+				<div
+					*ngFor="let job of jobs"
+					id="{{ job.buttonName }}Button"
+					class="job-button text-coop-text-header w-1/4 min-w-fit sm:w-fit p-1 m-1 text-xl hover:bg-coop-highlight hover:bg-opacity-25 sm:py-2 rounded-lg transition-all duration-75 flex items-center justify-center"
+					(click)="open(job.buttonName)"
+				>
+					<h1>{{ job.buttonName }}</h1>
+				</div>
+			</div>
+			<div
+				class="w-full sm:w-3/4 min-h-fit h-full border-2 border-coop-highlight rounded-lg flex items-center justify-start pb-2"
+			>
+				<div
+					*ngFor="let job of jobs"
+					id="{{ job.buttonName }}Display"
+					class="hidden flex-col items-center justify-center w-full h-full"
+				>
+					<h1
+						class="text-2xl phone:text-3xl w-full text-center text-coop-text-header font-semibold mt-2"
+					>
+						{{ job.title }}
+					</h1>
+
+					<p class="text-coop-text-paragraph">@ {{ job.company }}</p>
+
+					<p class="text-coop-text-paragraph">
+						{{ job.timeline }}
+					</p>
+
+					<div
+						class="w-10/12 min-h-[2px] my-2 bg-coop-text-paragraph"
+					></div>
+					<h1
+						class="text-xl phone:text-2xl w-full text-center text-coop-text-header font-semibold"
+					>
+						Roles and Responsibilities
+					</h1>
+					<ul
+						class="text-coop-text-paragraph w-11/12 text-center list-inside list-disc"
+					>
+						<li *ngFor="let role of job.keyRoles">
+							{{ role }}
+						</li>
+					</ul>
+
+					<div
+						class="w-10/12 min-h-[2px] my-2 bg-coop-text-paragraph"
+					></div>
+
+					<h1
+						class="text-xl phone:text-2xl w-full text-center text-coop-text-header font-semibold"
+					>
+						Key Skills
+					</h1>
+
+					<div
+						class="flex items-center justify-center w-11/12 phone:w-10/12 my-1 flex-wrap"
+					>
+						<p
+							*ngFor="let skill of job.skills"
+							class="bg-coop-text-paragraph py-2 rounded-md font-bold px-1 w-fit text-center my-1 mx-2 min-w-[75px]"
+						>
+							{{ skill }}
+						</p>
+					</div>
+
+					<div
+						class="w-10/12 min-h-[2px] my-2 bg-coop-text-paragraph"
+					></div>
+
+					<h1
+						*ngIf="job.references.length !== 0"
+						class="text-xl phone:text-2xl w-full text-center text-coop-text-header font-semibold"
+					>
+						References
+					</h1>
+					<ul
+						class="text-coop-text-paragraph w-11/12 text-center list-inside list-disc"
+					>
+						<li *ngFor="let ref of job.references">
+							{{ ref.name }}, {{ ref.title }}, Email:
+							<a
+								class="text-coop-highlight underline underline-offset-4"
+								href="mailto:{{ ref.email }}"
+								>{{ ref.email }}</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</div>
 
-	<coop-card-bar class="hidden sm:flex h-56 2xl:h-80 w-full"></coop-card-bar>
+	<coop-card-bar class="hidden sm:flex h-56 w-full"></coop-card-bar>
 	<coop-footer class="h-16 w-full"></coop-footer>
 </div>

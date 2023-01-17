@@ -1,5 +1,5 @@
 <nav
-	class="w-full h-full flex items-center justify-between bg-coop-background border-b-2 border-b-coop-highlight"
+	class="w-full h-full flex items-center justify-between bg-coop-background border-b-2 border-b-coop-highlight font-round"
 >
 	<div class="flex items-center justify-center w-[50px] h-full ml-4">
 		<a routerLink="/">
@@ -19,12 +19,7 @@
 		<a routerLink="/about" class="link">About Me</a>
 		<a routerLink="/projects" class="link">My Projects</a>
 		<a routerLink="/experience" class="link">My Career</a>
-		<a
-			class="link"
-			href="../../../assets/downloadables/CooperWernerResume2022.pdf"
-			download=""
-			>Resume</a
-		>
+		<a class="link" routerLink="/resume">Resume</a>
 	</div>
 	<div class="sm:hidden flex items-center pr-4" id="mobileMenuButton">
 		<button
@@ -50,9 +45,9 @@
 			<div
 				class="flex items-center justify-center w-[50px] h-full ml-4 sm:ml-0"
 			>
-				<a (click)="toPage('')">
+				<div (click)="toPage('')">
 					<img src="../../../assets/CWLogo.png" class="h-12 w-12" />
-				</a>
+				</div>
 			</div>
 			<button
 				class="outline-none mobile-menu-button"
@@ -70,7 +65,7 @@
 			class="h-screen w-full bg-coop-background flex flex-col items-center justify-center"
 		>
 			<div class="flex items-center justify-around w-full">
-				<a class="card" (click)="toPage('')">
+				<div class="card" (click)="toPage('')">
 					<div class="h-5/6 w-5/6 flex items-center justify-around">
 						<fa-icon [icon]="faHome" size="6x"></fa-icon>
 					</div>
@@ -79,8 +74,8 @@
 					>
 						<h1>Home</h1>
 					</div>
-				</a>
-				<a class="card" (click)="toPage('about')">
+				</div>
+				<div class="card" (click)="toPage('about')">
 					<div class="h-5/6 w-5/6 flex items-center justify-around">
 						<fa-icon [icon]="faUser" size="6x"></fa-icon>
 					</div>
@@ -89,11 +84,11 @@
 					>
 						<h1>About Me</h1>
 					</div>
-				</a>
+				</div>
 			</div>
 
 			<div class="flex items-center justify-around w-full py-4">
-				<a class="card" (click)="toPage('projects')">
+				<div class="card" (click)="toPage('projects')">
 					<div class="h-5/6 w-5/6 flex items-center justify-around">
 						<fa-icon [icon]="faFileCode" size="3x"></fa-icon>
 						<fa-icon [icon]="faGithub" size="3x"></fa-icon>
@@ -103,8 +98,8 @@
 					>
 						<h1>My Projects</h1>
 					</div>
-				</a>
-				<a class="card" (click)="toPage('experience')">
+				</div>
+				<div class="card" (click)="toPage('experience')">
 					<div class="h-5/6 w-5/6 flex items-center justify-around">
 						<fa-icon [icon]="faCode" size="3x"></fa-icon>
 						<fa-icon [icon]="faBuilding" size="3x"></fa-icon>
@@ -114,10 +109,10 @@
 					>
 						<h1>My Career</h1>
 					</div>
-				</a>
+				</div>
 			</div>
 			<div class="flex items-center justify-around w-full">
-				<a class="card" (click)="toPage('contact')">
+				<div class="card" (click)="toPage('contact')">
 					<div class="h-5/6 w-5/6 flex items-center justify-around">
 						<fa-icon [icon]="faPhone" size="3x"></fa-icon>
 						<fa-icon [icon]="faEnvelope" size="3x"></fa-icon>
@@ -127,11 +122,11 @@
 					>
 						<h1>Contact Me</h1>
 					</div>
-				</a>
-				<a
+				</div>
+				<div
+					id="ResumeDownload"
 					class="card"
-					href="../../../assets/downloadables/CooperWernerResume2022.pdf"
-					download=""
+					(click)="toPage('resume')"
 				>
 					<div class="h-5/6 w-5/6 flex items-center justify-around">
 						<fa-icon [icon]="faDownload" size="3x"></fa-icon>
@@ -142,12 +137,10 @@
 					>
 						<h1>Resume</h1>
 					</div>
-				</a>
+				</div>
 			</div>
 			<div class="pb-16 phone:hidden"></div>
 		</div>
-		<coop-footer
-			class="fixed bottom-0 left-0 w-full flex flex-col h-16"
-		></coop-footer>
+		<coop-footer class="fixed bottom-0 left-0 w-full h-16"></coop-footer>
 	</div>
 </nav>

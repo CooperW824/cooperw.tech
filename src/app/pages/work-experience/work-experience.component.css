@@ -1,0 +1,7 @@
+.selected {
+	@apply border-b-4 border-coop-highlight bg-coop-highlight bg-opacity-25;
+}
+
+.activeDisplay {
+	@apply flex;
+}

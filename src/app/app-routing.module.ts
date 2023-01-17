@@ -4,6 +4,7 @@ import { AboutMeComponent } from './pages/about-me/about-me.component';
 import { ContactMeComponent } from './pages/contact-me/contact-me.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { MyProjectsComponent } from './pages/my-projects/my-projects.component';
+import { ResumeComponent } from './pages/resume/resume.component';
 import { WorkExperienceComponent } from './pages/work-experience/work-experience.component';
 
 const routes: Routes = [
@@ -11,7 +12,8 @@ const routes: Routes = [
 	{ path: 'about', component: AboutMeComponent },
 	{ path: 'projects', component: MyProjectsComponent },
 	{ path: 'experience', component: WorkExperienceComponent },
-	{ path: 'contact', component: ContactMeComponent }
+	{ path: 'contact', component: ContactMeComponent },
+	{ path: 'resume', component: ResumeComponent },
 ];
 
 @NgModule({
