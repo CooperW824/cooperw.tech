@@ -7,7 +7,7 @@
 		class="flex flex-col items-center justify-around w-full bg-coop-background font-round px-4 flex-grow flex-shrink basis-auto"
 	>
 		<h1 class="text-4xl text-coop-highlight w-full text-center mt-2">
-			My Experience Makes Me Valuable from Day One.
+			My Experience Brings Value from Day One.
 		</h1>
 		<div
 			class="w-full lg:w-4/5 xl:w-2/3 h-5/6 min-h-fit flex flex-col sm:flex-row items-center justify-start my-4"
@@ -86,6 +86,7 @@
 					></div>
 
 					<h1
+						*ngIf="job.references.length !== 0"
 						class="text-xl phone:text-2xl w-full text-center text-coop-text-header font-semibold"
 					>
 						References

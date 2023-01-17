@@ -43,16 +43,16 @@ export class WorkExperienceComponent implements OnInit {
 				'AWS AppSync'
 			].sort(),
 			references: [
-				{
-					name: 'Juliana Buonanno',
-					title: 'CEO',
-					email: 'juliana@techslice.com'
-				},
-				{
-					name: 'Matthew Lim',
-					title: 'CTO',
-					email: 'matthew@techslice.com'
-				}
+				// {
+				// 	name: 'Juliana Buonanno',
+				// 	title: 'CEO',
+				// 	email: 'juliana@techslice.com'
+				// },
+				// {
+				// 	name: 'Matthew Lim',
+				// 	title: 'CTO',
+				// 	email: 'matthew@techslice.com'
+				// }
 			]
 		},
 		{
