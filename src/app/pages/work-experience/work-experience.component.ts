@@ -65,7 +65,7 @@ export class WorkExperienceComponent implements OnInit {
 				'Worked with teams spanning multiple companies.'
 			],
 			timeline: 'July 2022 - August 2022',
-			skills: ['Java', 'Agile', 'Confluence'],
+			skills: ['Java', 'Agile', 'Confluence'].sort(),
 			references: [
 				{
 					name: 'Marion Haas',

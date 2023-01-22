@@ -25,22 +25,35 @@
 				<div class="h-fit flex w-5/6 items-center justify-center">
 					<h1 class="text-2xl font-bold my-2">{{ project.title }}</h1>
 				</div>
-				<div class="flex w-full">
+				<div class="flex w-full h-full">
 					<div
-						class="h-full w-1/2 flex-grow-0 flex-shrink-0 basis-auto flex items-center justify-center"
+						class="h-full w-1/2 flex-grow-0 flex-shrink-0 min-h-full flex flex-col items-center justify-center"
 					>
 						<img
+							*ngIf="project.mediaType == 'picture'"
 							loading="lazy"
 							class="rounded-lg aspect-square w-full"
 							src="{{ project.mediaSrc }}"
 							alt="{{ project.title }}"
 						/>
+						<div class=" flex flex-col items-center justify-center w-full h-full">
+							<iframe
+								*ngIf="project.mediaType == 'video'"
+								class="w-full rounded-lg aspect-square  h-full"
+								[src]='project.safeURL'
+								title={{project.title}}
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								allowfullscreen
+							></iframe>
+						</div>
+						
 					</div>
 					<div
 						class="h-80 w-full flex flex-col items-center justify-between mx-4 text-coop-text-dark"
 					>
 						<div>
-							<p class="text-xl">{{ project.description }}</p>
+							<p class="text-xl font-semibold">{{ project.description }}</p>
 							<div *ngFor="let link of project.links">
 								<a
 									class="text-coop-text-dark underline underline-offset-2 text-lg"
@@ -72,11 +85,22 @@
 			>
 				<div class="w-full flex items-center justify-center">
 					<img
+					*ngIf="project.mediaType==='picture'"
 						loading="lazy"
 						class="rounded-lg aspect-video w-full"
 						src="{{ project.mobileMediaSrc }}"
 						alt="{{ project.title }}"
 					/>
+					
+					<iframe
+							*ngIf="project.mediaType == 'video'"
+							class="w-full aspect-video h-full rounded-lg"
+							[src]='project.safeURL'
+							title={{project.title}}
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowfullscreen
+						></iframe>
 				</div>
 
 				<div class="h-fit flex w-11/12 items-center justify-center">
