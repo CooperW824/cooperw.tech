@@ -36,7 +36,7 @@
 	</div>
 	<div
 		id="mobileMenu"
-		class="sm:hidden fixed top-0 left-0 h-screen z-10 bg-coop-background flex flex-col items-center start transition-all hidden w-full"
+		class="sm:hidden fixed top-0 left-0 h-full z-10 bg-coop-background flex flex-col items-center start transition-all hidden w-full"
 	>
 		<div
 			class="flex items-center justify-between pr-4 fixed top-0 border-b-2 border-coop-highlight w-full h-16"
@@ -62,7 +62,7 @@
 			</button>
 		</div>
 		<div
-			class="h-screen w-full bg-coop-background flex flex-col items-center justify-center"
+			class="h-full w-full bg-coop-background flex flex-col items-center justify-center"
 		>
 			<div class="flex items-center justify-around w-full">
 				<div class="card" (click)="toPage('')">
@@ -141,6 +141,6 @@
 			</div>
 			<div class="pb-16 phone:hidden"></div>
 		</div>
-		<coop-footer class="fixed bottom-0 left-0 w-full h-16"></coop-footer>
+		<coop-footer class="fixed bottom-0 left-0 w-full"></coop-footer>
 	</div>
 </nav>

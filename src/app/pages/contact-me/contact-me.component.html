@@ -1,22 +1,111 @@
 <div
-	class="flex flex-col justify-between h-screen bg-coop-background flex-grow-0 flex-shrink basis-auto"
+	class="flex flex-col h-full justify-between bg-coop-background flex-grow flex-shrink basis-auto"
 >
 	<coop-nav-bar class="h-16 w-full"></coop-nav-bar>
 
 	<div
-		class="flex items-center justify-center w-full bg-coop-background font-round h-fit p-4 flex-grow flex-shrink basis-auto"
+		class="flex flex-col md:flex-row items-center justify-around w-full bg-coop-background font-round h-fit p-4 flex-grow flex-shrink basis-auto"
 	>
 		<div
-			class="w-full 2xl:w-7/12 flex flex-col items-center justify-around text-coop-highlight text-center"
+			class="w-full md:w-[45%] xl:w-[35%] border-2 border-coop-highlight h-[350px] rounded-lg m-2"
 		>
-			<fa-icon [icon]="faLaptopCode" size="6x"></fa-icon>
-			<h1 class="text-6xl">
-				Hiya! This page is still under development, but don't worry! It
-				will be available soon!
-			</h1>
+			<div class="w-full h-full flex flex-col items-start justify-start">
+				<div class="w-full">
+					<h1 class="text-3xl text-coop-text-header text-center">
+						Contact me via my socials:
+					</h1>
+				</div>
+				<div
+					class="flex flex-col w-11/12 h-full items-start justify-around text-sm xs:text-lg phone:text-2xl sm:text-xl lg:text-2xl"
+				>
+					<a
+						href="https://github.com/CooperW824"
+						class="hover:text-coop-highlight transition-colors flex items-center justify-between mx-4 w-full text-coop-text-paragraph"
+						target="_blank"
+						aria-label="My Github Profile"
+						title="My GitHub Profile"
+					>
+						<fa-icon class="" [icon]="faGithub" size="2x"></fa-icon>
+						<h1>GitHub: CooperW824</h1>
+					</a>
+					<a
+						href="https://www.youtube.com/@CooperWTech"
+						class="hover:text-coop-highlight transition-colors flex items-center justify-between mx-4 w-full text-coop-text-paragraph"
+						target="_blank"
+						aria-label="My Youtube Channel"
+						title="My Youtube Channel"
+					>
+						<fa-icon
+							class=""
+							[icon]="faYoutube"
+							size="2x"
+						></fa-icon>
+						<h1>Youtube: @CooperWTech</h1>
+					</a>
+					<a
+						href="https://www.linkedin.com/in/cooper-werner-2b2871248/"
+						class="hover:text-coop-highlight transition-colors flex items-center justify-between mx-4 w-full text-coop-text-paragraph"
+						target="_blank"
+						aria-label="My LinkedIn Profile"
+						title="My LinkedIn Profile"
+					>
+						<fa-icon
+							class=""
+							[icon]="faLinkedin"
+							size="2x"
+						></fa-icon>
+						<h1>LinkedIn: Cooper Werner</h1>
+					</a>
+					<a
+						href="mailto:cooperwerner824@gmail.com "
+						class="hover:text-coop-highlight transition-colors flex items-center justify-between mx-4 w-full text-coop-text-paragraph"
+						target="_blank"
+						aria-label="Email Me"
+						title="Email Me"
+					>
+						<fa-icon
+							class="mr-8"
+							[icon]="faEnvelope"
+							size="2x"
+						></fa-icon>
+						<h1
+							class="text-xs xs:text-base phone:text-xl sm:text-base lg:text-xl"
+						>
+							cooperwerner824@gmail.com
+						</h1>
+					</a>
+				</div>
+			</div>
 		</div>
+
+		<!-- <div
+			class="w-full md:w-[45%] xl:w-[35%] border-2 border-coop-highlight h-[370px] md:h-full rounded-lg m-2"
+		>
+			<h1 class="text-3xl text-coop-text-header text-center">
+				Or via the contact form:
+			</h1>
+			<div
+				class="w-full flex flex-col flex-grow flex-shrink basis-auto items-center justify-center"
+			>
+				<form
+					class="w-11/12 h-full flex flex-col items-center justify-center"
+				>
+					<label class="w-full text-lg text-coop-text-paragraph text-left " for="nameInput">Your name</label>
+					<input class="w-full rounded-lg text-center text-coop-background " id="nameInput" />
+					<label class="w-full text-lg text-coop-text-paragraph text-left " for="emailInput">Your Email</label>
+					<input class="w-full rounded-lg text-center text-coop-background " id="emailInput" />
+					<label class="w-full text-lg text-coop-text-paragraph text-left " for="messageSubject"
+						>Message Subject</label
+					>
+					<input class="w-full rounded-lg text-center text-coop-background " id="messageSubject" />
+					<label class="w-full text-lg text-coop-text-paragraph text-left" for="message">Your Message</label>
+					<textarea class="w-full rounded-lg text-center text-coop-background mb-2 h-24 phone:h-48" id="message"></textarea>
+					<button type="submit" class="link">Send Message</button>
+				</form>
+			</div>
+		</div> -->
 	</div>
 
-	<coop-card-bar class="hidden sm:flex h-56 2xl:h-80 w-full"></coop-card-bar>
-	<coop-footer class="h-16 w-full"></coop-footer>
+	<coop-card-bar class="hidden sm:flex h-56 2xl:h-80 w-full fixed bottom-12"></coop-card-bar>
+	<coop-footer class="w-full fixed bottom-0"></coop-footer>
 </div>
