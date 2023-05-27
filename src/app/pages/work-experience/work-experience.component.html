@@ -84,25 +84,7 @@
 					<div
 						class="w-10/12 min-h-[2px] my-2 bg-coop-text-paragraph"
 					></div>
-
-					<h1
-						*ngIf="job.references.length !== 0"
-						class="text-xl phone:text-2xl w-full text-center text-coop-text-header font-semibold"
-					>
-						References
-					</h1>
-					<ul
-						class="text-coop-text-paragraph w-11/12 text-center list-inside list-disc"
-					>
-						<li *ngFor="let ref of job.references">
-							{{ ref.name }}, {{ ref.title }}, Email:
-							<a
-								class="text-coop-highlight underline underline-offset-4"
-								href="mailto:{{ ref.email }}"
-								>{{ ref.email }}</a
-							>
-						</li>
-					</ul>
+					
 				</div>
 			</div>
 		</div>

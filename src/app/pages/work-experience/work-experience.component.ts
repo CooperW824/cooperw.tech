@@ -13,7 +13,7 @@ interface experience {
 	title: string;
 	keyRoles: string[];
 	skills: string[];
-	references: reference[];
+	
 }
 
 @Component({
@@ -41,48 +41,7 @@ export class WorkExperienceComponent implements OnInit {
 				'AWS Lambda',
 				'AWS DynamoDB',
 				'AWS AppSync'
-			].sort(),
-			references: [
-				// {
-				// 	name: 'Juliana Buonanno',
-				// 	title: 'CEO',
-				// 	email: 'juliana@techslice.com'
-				// },
-				// {
-				// 	name: 'Matthew Lim',
-				// 	title: 'CTO',
-				// 	email: 'matthew@techslice.com'
-				// }
-			]
-		},
-		{
-			buttonName: 'Bellese',
-			company: 'Bellese Technologies',
-			title: 'Software Engineering Intern',
-			keyRoles: [
-				'Worked on the Medicare Pricing System Modernization (MPSM) Project',
-				'Contributed to documentation and organization items',
-				'Worked with teams spanning multiple companies.'
-			],
-			timeline: 'July 2022 - August 2022',
-			skills: ['Java', 'Agile', 'Confluence'].sort(),
-			references: [
-				{
-					name: 'Marion Haas',
-					title: 'MPSM Project Manager',
-					email: 'marion.sa.haas@gmail.com'
-				},
-				{
-					name: 'Brendan Martin',
-					title: 'MPSM Scrum Master and Delivery Manager',
-					email: 'bmartin@bellese.io'
-				},
-				{
-					name: 'Pere Ozogu',
-					title: 'Full-Stack Software Engineer',
-					email: 'pozogu@bellese.io'
-				}
-			]
+			].sort()
 		},
 		{
 			buttonName: 'SMR',
@@ -104,13 +63,6 @@ export class WorkExperienceComponent implements OnInit {
 				'GDB',
 				'USB'
 			].sort(),
-			references: [
-				{
-					name: 'Adam Nash',
-					title: 'Owner',
-					email: 'adam@smr.llc'
-				}
-			]
 		}
 	];
 
