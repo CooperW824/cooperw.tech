@@ -26,12 +26,14 @@ export class WorkExperienceComponent implements OnInit {
 		{
 			buttonName: 'TechSlice',
 			company: 'TechSlice',
-			timeline: 'August 2022 - Present',
+			timeline: 'August 2022 - August 2023',
 			title: 'Software Engineering Intern',
 			keyRoles: [
-				'Develop web-based user interfaces in NextJS and Angular',
+				'Develop web-based user interfaces in NextJS, Nuxt 3 and Angular',
 				'Connect user interfaces with AWS resources using AWS Amplify',
-				'Integrate third-party systems like ArcGIS to add functionality to apps'
+				'Integrate third-party systems like ArcGIS to add functionality to apps',
+				'Built systems for large scale batch data processing using AWS Batch',
+				'Implemented TOTP and WebAuthn MFA for internal and client projects.'
 			],
 			skills: [
 				'AWS Amplify',
@@ -40,7 +42,12 @@ export class WorkExperienceComponent implements OnInit {
 				'TailwindCSS',
 				'AWS Lambda',
 				'AWS DynamoDB',
-				'AWS AppSync'
+				'AWS AppSync', 
+				'Terraform',
+				'Nuxt 3',
+				'AWS Batch',
+				'TOTP MFA',
+				'WebAuthn / Passkey MFA'
 			].sort()
 		},
 		{

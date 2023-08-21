@@ -28,6 +28,22 @@ export class MyProjectsComponent implements OnInit {
 	readonly projects: project[] = [
 		{
 			mediaType: 'picture',
+			mediaSrc: '../../../assets/imgs/quikpak.png',
+			mobileMediaSrc: '../../../assets/imgs/quikpak_mobile.png',
+			title: 'Quikpak: A minimalist packing list for the web.',
+			description: `A simple todo / packing list app for the web. 
+			A simple app I made in a few hours to test the skills I learned at my internship with
+			TechSlice and to explore per-user access in DynamoDB along with basic data relationship modeling.`,
+			codeLink: 'https://github.com/CooperW824/quikpak',
+			links: [
+				{
+					href: 'https://quikpak.cooperw.tech',
+					text: 'Check it out on its website.'
+				}
+			]
+		},
+		{
+			mediaType: 'picture',
 			mediaSrc: '../../../assets/imgs/WFC_Circuit.png',
 			mobileMediaSrc: '../../../assets/imgs/WFC_Circuit_Mobile.png',
 			title: 'Wave Function Collapse: Procedural Image Generation using Physics.',
@@ -51,8 +67,7 @@ export class MyProjectsComponent implements OnInit {
 			mobileMediaSrc: '../../../assets/imgs/WTDTMobile.png',
 			mediaSrc: '../../../assets/imgs/WTDT.png',
 			title: 'Western Tech Data Tool: A Simpler way to Visualize Data.',
-			description:
-				`A data visualization and analysis tool built with Python, PyQT, and Pandas. 
+			description: `A data visualization and analysis tool built with Python, PyQT, and Pandas. 
 				I designed the tool to make it easier for students to make, analyze and save data charts.
 				The tool is a work in progress, see the GitHub Page for updates.`,
 			codeLink: 'https://github.com/CooperW824/WestenTechDataTool'
@@ -76,7 +91,7 @@ export class MyProjectsComponent implements OnInit {
 		},
 		{
 			mediaType: 'video',
-			mobileMediaSrc: '../../../assets/imgs/WFC_Circuit_Mobile.png',
+			mobileMediaSrc: '',
 			mediaSrc: '',
 			safeURL: this._sanitizer.bypassSecurityTrustResourceUrl(
 				'https://www.youtube.com/embed/t2nIKnYKtTw'
@@ -94,7 +109,7 @@ export class MyProjectsComponent implements OnInit {
 		},
 		{
 			mediaType: 'video',
-			mobileMediaSrc: '../../../assets/imgs/WFC_Circuit_Mobile.png',
+			mobileMediaSrc: '',
 			mediaSrc: '',
 			safeURL: this._sanitizer.bypassSecurityTrustResourceUrl(
 				'https://www.youtube.com/embed/eZGY9nt4B2k'
