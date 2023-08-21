@@ -53,7 +53,7 @@ export class MyProjectsComponent implements OnInit {
 			codeLink: 'https://github.com/CooperW824/wave-function-collapse',
 			links: [
 				{
-					href: 'https://wave-function-collapse.pages.dev',
+					href: 'https://wfc.cooperw.tech',
 					text: 'Mess Around with the Web Project'
 				},
 				{
