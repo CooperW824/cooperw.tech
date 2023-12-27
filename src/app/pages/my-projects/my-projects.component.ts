@@ -27,6 +27,22 @@ interface link {
 export class MyProjectsComponent implements OnInit {
 	readonly projects: project[] = [
 		{
+			mediaType: 'video',
+			mobileMediaSrc: '',
+			mediaSrc: '',
+			safeURL: this._sanitizer.bypassSecurityTrustResourceUrl(
+				'https://www.youtube.com/embed/KoRHScBFKuc'
+			),
+			title: 'Authbear: A Simple, Secure, and Open-Source Authentication Service.',
+			description: `Organize your TOTP codes into folders and quickly find them with a search bar.
+			The codes are encrypted with AES-256, and stored only on your device.
+			 Built with Nuxt3, TypeScript, and TailwindCSS. Built in collaboration with Erik Umble and Jamie Alfaro.`,
+			codeLink: 'https://github.com/CooperW824/authbear',
+			links: [
+				{ href: 'https://authbear.org', text: 'Check out AuthBear' }
+			]
+		},
+		{
 			mediaType: 'picture',
 			mediaSrc: '../../../assets/imgs/quikpak.png',
 			mobileMediaSrc: '../../../assets/imgs/quikpak_mobile.png',
