@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser';
 
 interface project {
 	mediaType: 'picture' | 'video';
@@ -11,7 +11,7 @@ interface project {
 	description: string;
 	codeLink: string;
 	links?: link[];
-	safeURL?: SafeResourceUrl;
+	safeURL?: SafeUrl;
 }
 
 interface link {
@@ -25,12 +25,14 @@ interface link {
 	styleUrls: ['./my-projects.component.css']
 })
 export class MyProjectsComponent implements OnInit {
+	constructor(private sanitizer: DomSanitizer) {}
 	readonly projects: project[] = [
 		{
 			mediaType: 'video',
 			mobileMediaSrc: '',
 			mediaSrc: '',
-			safeURL: this._sanitizer.bypassSecurityTrustResourceUrl(
+			// @ts-ignore
+			safeURL: this.sanitizer.bypassSecurityTrustResourceUrl(
 				'https://www.youtube.com/embed/KoRHScBFKuc'
 			),
 			title: 'Authbear: A Simple, Secure, and Open-Source Authentication Service.',
@@ -109,7 +111,8 @@ export class MyProjectsComponent implements OnInit {
 			mediaType: 'video',
 			mobileMediaSrc: '',
 			mediaSrc: '',
-			safeURL: this._sanitizer.bypassSecurityTrustResourceUrl(
+			// @ts-ignore
+			safeURL: this.sanitizer.bypassSecurityTrustResourceUrl(
 				'https://www.youtube.com/embed/t2nIKnYKtTw'
 			),
 			title: 'OpenVaxx: An Award Winning, Open-Source, Anonymous, and Secure, Vaccine Passport.',
@@ -127,7 +130,8 @@ export class MyProjectsComponent implements OnInit {
 			mediaType: 'video',
 			mobileMediaSrc: '',
 			mediaSrc: '',
-			safeURL: this._sanitizer.bypassSecurityTrustResourceUrl(
+			// @ts-ignore
+			safeURL: this.sanitizer.bypassSecurityTrustResourceUrl(
 				'https://www.youtube.com/embed/eZGY9nt4B2k'
 			),
 			title: 'Hobbits USB Reader: A tool to simplify reading from USB devices.',
@@ -140,7 +144,6 @@ export class MyProjectsComponent implements OnInit {
 	];
 	faLaptopCode = faLaptopCode;
 	faGitHub = faGithub;
-	constructor(private _sanitizer: DomSanitizer) {}
 
 	ngOnInit(): void {}
 }
