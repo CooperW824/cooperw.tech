@@ -31,7 +31,6 @@ export class MyProjectsComponent implements OnInit {
 			mediaType: 'video',
 			mobileMediaSrc: '',
 			mediaSrc: '',
-			// @ts-ignore
 			safeURL: this.sanitizer.bypassSecurityTrustResourceUrl(
 				'https://www.youtube.com/embed/KoRHScBFKuc'
 			),
@@ -111,7 +110,6 @@ export class MyProjectsComponent implements OnInit {
 			mediaType: 'video',
 			mobileMediaSrc: '',
 			mediaSrc: '',
-			// @ts-ignore
 			safeURL: this.sanitizer.bypassSecurityTrustResourceUrl(
 				'https://www.youtube.com/embed/t2nIKnYKtTw'
 			),
@@ -130,7 +128,6 @@ export class MyProjectsComponent implements OnInit {
 			mediaType: 'video',
 			mobileMediaSrc: '',
 			mediaSrc: '',
-			// @ts-ignore
 			safeURL: this.sanitizer.bypassSecurityTrustResourceUrl(
 				'https://www.youtube.com/embed/eZGY9nt4B2k'
 			),
