@@ -13,12 +13,12 @@
 			class="w-full lg:w-4/5 xl:w-2/3 h-5/6 min-h-fit flex flex-col sm:flex-row items-center justify-start my-4"
 		>
 			<div
-				class="jobs-list w-11/12 sm:w-1/5 min-h-fit h-16 sm:h-full mb-2 sm:my-0 flex sm:flex-col items-center justify-around flex-wrap"
+				class="jobs-list w-11/12 sm:w-1/5 min-h-fit h-24 sm:h-full mb-2 sm:my-0 flex sm:flex-col items-center justify-around flex-wrap"
 			>
 				<div
 					*ngFor="let job of jobs"
 					id="{{ job.buttonName }}Button"
-					class="job-button text-coop-text-header w-1/4 min-w-fit sm:w-fit p-1 m-1 text-xl hover:bg-coop-highlight hover:bg-opacity-25 sm:py-2 rounded-lg transition-all duration-75 flex items-center justify-center"
+					class="job-button text-center text-coop-text-header w-1/4 min-w-fit sm:w-fit p-1 m-1 text-xl hover:bg-coop-highlight hover:bg-opacity-25 sm:py-2 rounded-lg transition-all duration-75 flex items-center justify-center"
 					(click)="open(job.buttonName)"
 				>
 					<h1>{{ job.buttonName }}</h1>

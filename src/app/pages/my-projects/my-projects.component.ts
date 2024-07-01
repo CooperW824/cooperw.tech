@@ -28,6 +28,24 @@ export class MyProjectsComponent implements OnInit {
 	constructor(private sanitizer: DomSanitizer) {}
 	readonly projects: project[] = [
 		{
+			title: "HackRPI 2024 Website: A simple, modern, and responsive website for HackRPI 2024.",
+			codeLink: "https://github.com/hack-rpi/HackRPI-Website-2024",
+			description: `A simple, modern, and responsive website for HackRPI 2024. I led a team of 6 developers to work on the site. I worked on the schedule page, the meet the team component, and the home page. The website is built with NextJS, TypeScript, and TailwindCSS.`,
+			mediaType: 'picture',
+			mediaSrc: '../../../assets/imgs/HackRPI.com.png',
+			mobileMediaSrc: '../../../assets/imgs/HackRPI.com_Mobile.png',
+			links: [{href: 'https://hackrpi.com', text: 'Check out the website'}]
+		},
+		{
+			title: 'RPI Spaceflight Control Center: A simple, safe, controller of RPI Spaceflight rocket engine.',
+			codeLink: 'https://github.com/Rensselaer-Spaceflight-Society/Rocket-Engine',
+			mediaType: 'picture',
+			mediaSrc: '../../../assets/imgs/RPI_Spaceflight_Control_Room.png',
+			mobileMediaSrc: '../../../assets/imgs/RPI_Spaceflight_Control_Room_Mobile.png',
+			description: `A simple, memory-safe, and user-friendly controller for the RPI Spaceflight Bi-Propellant Rocket Engine.
+			The control center is written in C++ and uses the Qt framework for the GUI. Aruduino is used to interface with the engine and sensors.` 
+		},
+		{
 			mediaType: 'video',
 			mobileMediaSrc: '',
 			mediaSrc: '',
@@ -89,23 +107,23 @@ export class MyProjectsComponent implements OnInit {
 				The tool is a work in progress, see the GitHub Page for updates.`,
 			codeLink: 'https://github.com/CooperW824/WestenTechDataTool'
 		},
-		{
-			mediaType: 'picture',
-			mobileMediaSrc: '../../../assets/imgs/PiApproxMobile.png',
-			mediaSrc: '../../../assets/imgs/PiApprox.png',
-			title: 'Pi-Day 2022: Three Algorithms to Approximate Pi.',
-			description: `
-			The first algorithm checks whether random points are in a circle to find Pi.
-			The second algorithm uses calculus to find the area of a semicircle with a radius equalling 1.
-			The third algorithm uses the physics of colliding blocks to find Pi.`,
-			codeLink: 'https://github.com/CooperW824/Pi-Day-Algorithms',
-			links: [
-				{
-					href: 'https://youtu.be/jsYwFizhncE',
-					text: 'Colliding Blocks Explainer by 3 Blue 1 Brown'
-				}
-			]
-		},
+		// {
+		// 	mediaType: 'picture',
+		// 	mobileMediaSrc: '../../../assets/imgs/PiApproxMobile.png',
+		// 	mediaSrc: '../../../assets/imgs/PiApprox.png',
+		// 	title: 'Pi-Day 2022: Three Algorithms to Approximate Pi.',
+		// 	description: `
+		// 	The first algorithm checks whether random points are in a circle to find Pi.
+		// 	The second algorithm uses calculus to find the area of a semicircle with a radius equalling 1.
+		// 	The third algorithm uses the physics of colliding blocks to find Pi.`,
+		// 	codeLink: 'https://github.com/CooperW824/Pi-Day-Algorithms',
+		// 	links: [
+		// 		{
+		// 			href: 'https://youtu.be/jsYwFizhncE',
+		// 			text: 'Colliding Blocks Explainer by 3 Blue 1 Brown'
+		// 		}
+		// 	]
+		// },
 		{
 			mediaType: 'video',
 			mobileMediaSrc: '',

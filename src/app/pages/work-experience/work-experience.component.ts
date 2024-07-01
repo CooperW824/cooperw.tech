@@ -24,6 +24,28 @@ interface experience {
 export class WorkExperienceComponent implements OnInit {
 	jobs: experience[] = [
 		{
+			buttonName: 'Paraxial Technologies',
+			company: 'Paraxial Technologies',
+			timeline: 'April 2024 - Present',
+			title: 'Software Engineering Intern',
+			keyRoles: [
+				"Develop an automated testing framework for the company's lung nodule segmentation software",
+				"Port the lung nodule segmentation software from Ubuntu 16.04 to Ubuntu 22.04",
+				"Develop an ITK image processing pipeline to detect and quantify emphysema in CT scans",
+				"Research factors that influence the size, growth, and malignancy of lung nodules",
+			],
+			skills: [
+				"Python",
+				"C++",
+				"ITK",
+				"VTK",
+				"Ubuntu",
+				"Git",
+				"GitHub",
+				"Image Processing",
+			].sort()
+		},
+		{
 			buttonName: 'TechSlice',
 			company: 'TechSlice',
 			timeline: 'August 2022 - August 2023',
