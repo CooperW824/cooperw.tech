@@ -8,9 +8,10 @@ import {
 
 
 @Component({
-	selector: 'coop-contact-me',
-	templateUrl: './contact-me.component.html',
-	styleUrls: ['./contact-me.component.css']
+    selector: 'coop-contact-me',
+    templateUrl: './contact-me.component.html',
+    styleUrls: ['./contact-me.component.css'],
+    standalone: false
 })
 export class ContactMeComponent implements OnInit {
 	faLaptopCode = faLaptopCode;

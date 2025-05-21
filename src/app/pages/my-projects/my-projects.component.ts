@@ -20,9 +20,10 @@ interface link {
 }
 
 @Component({
-	selector: 'coop-my-projects',
-	templateUrl: './my-projects.component.html',
-	styleUrls: ['./my-projects.component.css']
+    selector: 'coop-my-projects',
+    templateUrl: './my-projects.component.html',
+    styleUrls: ['./my-projects.component.css'],
+    standalone: false
 })
 export class MyProjectsComponent implements OnInit {
 	constructor(private sanitizer: DomSanitizer) {}

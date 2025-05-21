@@ -7,8 +7,9 @@ import {
 import { faEnvelope, faHeart } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-	selector: 'coop-footer',
-	templateUrl: './footer.component.html'
+    selector: 'coop-footer',
+    templateUrl: './footer.component.html',
+    standalone: false
 })
 export class FooterComponent implements OnInit {
 	faGithub = faGithub;

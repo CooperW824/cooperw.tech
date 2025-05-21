@@ -13,9 +13,10 @@ import { faBuilding } from '@fortawesome/free-regular-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
-	selector: 'coop-card-bar',
-	templateUrl: './card-bar.component.html',
-	styleUrls: ['./card-bar.component.css']
+    selector: 'coop-card-bar',
+    templateUrl: './card-bar.component.html',
+    styleUrls: ['./card-bar.component.css'],
+    standalone: false
 })
 export class CardBarComponent implements OnInit {
 	faPhone = faPhone;

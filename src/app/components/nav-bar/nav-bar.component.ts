@@ -18,9 +18,10 @@ import { faBuilding } from '@fortawesome/free-regular-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { Router } from '@angular/router';
 @Component({
-	selector: 'coop-nav-bar',
-	templateUrl: './nav-bar.component.html',
-	styleUrls: ['./nav-bar.component.css']
+    selector: 'coop-nav-bar',
+    templateUrl: './nav-bar.component.html',
+    styleUrls: ['./nav-bar.component.css'],
+    standalone: false
 })
 export class NavBarComponent implements OnInit {
 	faList = faBars;

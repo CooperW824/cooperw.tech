@@ -17,9 +17,10 @@ interface experience {
 }
 
 @Component({
-	selector: 'coop-work-experience',
-	templateUrl: './work-experience.component.html',
-	styleUrls: ['./work-experience.component.css']
+    selector: 'coop-work-experience',
+    templateUrl: './work-experience.component.html',
+    styleUrls: ['./work-experience.component.css'],
+    standalone: false
 })
 export class WorkExperienceComponent implements OnInit {
 	jobs: experience[] = [
