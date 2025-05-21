@@ -11,16 +11,20 @@
 			"prefix": "coop",
 			"architect": {
 				"build": {
-					"builder": "@angular-devkit/build-angular:browser",
+					"builder": "@angular-devkit/build-angular:application",
 					"options": {
-						"outputPath": "dist/cooperw.tech",
-						"index": "src/index.html",
-						"main": "src/main.ts",
-						"polyfills": "src/polyfills.ts",
+						"outputPath": {
+              "base": "dist/cooperw.tech"
+            },
+            "index": "src/index.html",
+						"polyfills": [
+              "src/polyfills.ts"
+            ],
 						"tsConfig": "tsconfig.app.json",
 						"assets": ["src/favicon.ico", "src/assets"],
 						"styles": ["src/styles.css"],
-						"scripts": []
+            "scripts": [],
+            "browser": "src/main.ts"
 					},
 					"configurations": {
 						"production": {
@@ -44,10 +48,8 @@
 							],
 							"outputHashing": "all"
 						},
-						"development": {
-							"buildOptimizer": false,
-							"optimization": false,
-							"vendorChunk": true,
+            "development": {
+              "optimization": false,
 							"extractLicenses": false,
 							"sourceMap": true,
 							"namedChunks": true
@@ -58,19 +60,19 @@
 				"serve": {
 					"builder": "@angular-devkit/build-angular:dev-server",
 					"configurations": {
-						"production": {
-							"browserTarget": "cooperw.tech:build:production"
+            "production": {
+              "buildTarget": "cooperw.tech:build:production"
 						},
-						"development": {
-							"browserTarget": "cooperw.tech:build:development"
+            "development": {
+              "buildTarget": "cooperw.tech:build:development"
 						}
 					},
 					"defaultConfiguration": "development"
 				},
 				"extract-i18n": {
 					"builder": "@angular-devkit/build-angular:extract-i18n",
-					"options": {
-						"browserTarget": "cooperw.tech:build"
+          "options": {
+            "buildTarget": "cooperw.tech:build"
 					}
 				},
 				"test": {
