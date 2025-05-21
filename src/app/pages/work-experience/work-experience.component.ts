@@ -27,7 +27,7 @@ export class WorkExperienceComponent implements OnInit {
 		{
 			buttonName: 'Paraxial Technologies',
 			company: 'Paraxial Technologies',
-			timeline: 'April 2024 - Present',
+			timeline: 'April 2024 - September 2024',
 			title: 'Software Engineering Intern',
 			keyRoles: [
 				"Develop an automated testing framework for the company's lung nodule segmentation software",
