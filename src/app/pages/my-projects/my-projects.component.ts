@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
-import { DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser';
+import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browser';
 
 interface project {
 	mediaType: 'picture' | 'video';
@@ -20,14 +20,33 @@ interface link {
 }
 
 @Component({
-    selector: 'coop-my-projects',
-    templateUrl: './my-projects.component.html',
-    styleUrls: ['./my-projects.component.css'],
-    standalone: false
+	selector: 'coop-my-projects',
+	templateUrl: './my-projects.component.html',
+	styleUrls: ['./my-projects.component.css'],
+	standalone: false
 })
 export class MyProjectsComponent implements OnInit {
-	constructor(private sanitizer: DomSanitizer) {}
+	constructor(private sanitizer: DomSanitizer) { }
 	readonly projects: project[] = [
+		{
+			title: "MAIS: Modular Audio over IP System.",
+			codeLink: "Not Publicly Available",
+			description: `MAIS is a modular, low-latency, and high-fidelity audio over IP system built for studio music recording and live performance.
+			This project featuers a custom-designed 4-layer PCB, optimized for signal integrity and low latency, and a user-friendly software interface for seamless audio routing and control.
+			`,
+			mediaType: 'picture',
+			mediaSrc: '../../../assets/imgs/MAIS.png',
+			mobileMediaSrc: '../../../assets/imgs/MAIS_Mobile.png'
+		},
+		{
+			title: 'RPU-1: Electronics for RPI\'s first liquid fueled rocket engine.',
+			codeLink: 'https://github.com/Rensselaer-Spaceflight-Society/Rocket-Engine',
+			mediaType: 'picture',
+			mediaSrc: '../../../assets/imgs/RPI_Spaceflight_Control_Room.png',
+			mobileMediaSrc: '../../../assets/imgs/RPI_Spaceflight_Control_Room_Mobile.png',
+			description: `A simple, memory-safe, and user-friendly controller for the RPI Spaceflight Bi-Propellant Rocket Engine.
+			The control center is written in C++ and uses the Qt framework for the GUI. Aruduino is used to interface with the engine and sensors.`
+		},
 		{
 			title: "HackRPI 2024 Website: A simple, modern, and responsive website for HackRPI 2024.",
 			codeLink: "https://github.com/hack-rpi/HackRPI-Website-2024",
@@ -35,16 +54,7 @@ export class MyProjectsComponent implements OnInit {
 			mediaType: 'picture',
 			mediaSrc: '../../../assets/imgs/HackRPI.com.png',
 			mobileMediaSrc: '../../../assets/imgs/HackRPI.com_Mobile.png',
-			links: [{href: 'https://hackrpi.com', text: 'Check out the website'}]
-		},
-		{
-			title: 'RPI Spaceflight Control Center: A simple, safe, controller of RPI Spaceflight rocket engine.',
-			codeLink: 'https://github.com/Rensselaer-Spaceflight-Society/Rocket-Engine',
-			mediaType: 'picture',
-			mediaSrc: '../../../assets/imgs/RPI_Spaceflight_Control_Room.png',
-			mobileMediaSrc: '../../../assets/imgs/RPI_Spaceflight_Control_Room_Mobile.png',
-			description: `A simple, memory-safe, and user-friendly controller for the RPI Spaceflight Bi-Propellant Rocket Engine.
-			The control center is written in C++ and uses the Qt framework for the GUI. Aruduino is used to interface with the engine and sensors.` 
+			links: [{ href: 'https://hackrpi.com', text: 'Check out the website' }]
 		},
 		{
 			mediaType: 'video',
@@ -62,52 +72,52 @@ export class MyProjectsComponent implements OnInit {
 				{ href: 'https://authbear.org', text: 'Check out AuthBear' }
 			]
 		},
-		{
-			mediaType: 'picture',
-			mediaSrc: '../../../assets/imgs/quikpak.png',
-			mobileMediaSrc: '../../../assets/imgs/quikpak_mobile.png',
-			title: 'Quikpak: A minimalist packing list for the web.',
-			description: `A simple todo / packing list app for the web. 
-			A simple app I made in a few hours to test the skills I learned at my internship with
-			TechSlice and to explore per-user access in DynamoDB along with basic data relationship modeling.`,
-			codeLink: 'https://github.com/CooperW824/quikpak',
-			links: [
-				{
-					href: 'https://quikpak.cooperw.tech',
-					text: 'Check it out on its website.'
-				}
-			]
-		},
-		{
-			mediaType: 'picture',
-			mediaSrc: '../../../assets/imgs/WFC_Circuit.png',
-			mobileMediaSrc: '../../../assets/imgs/WFC_Circuit_Mobile.png',
-			title: 'Wave Function Collapse: Procedural Image Generation using Physics.',
-			description: `Using principles borrowed from quantum mechanics, Wave Function Collapse generates images by splitting up, and 
-			recursively determining (collapsing) each chunk of an image based on the 
-			value of the surrounding chunks.`,
-			codeLink: 'https://github.com/CooperW824/wave-function-collapse',
-			links: [
-				{
-					href: 'https://wfc.cooperw.tech',
-					text: 'Mess Around with the Web Project'
-				},
-				{
-					href: 'https://github.com/mxgmn/WaveFunctionCollapse',
-					text: 'Original Algorithm by mgxmn'
-				}
-			]
-		},
-		{
-			mediaType: 'picture',
-			mobileMediaSrc: '../../../assets/imgs/WTDTMobile.png',
-			mediaSrc: '../../../assets/imgs/WTDT.png',
-			title: 'Western Tech Data Tool: A Simpler way to Visualize Data.',
-			description: `A data visualization and analysis tool built with Python, PyQT, and Pandas. 
-				I designed the tool to make it easier for students to make, analyze and save data charts.
-				The tool is a work in progress, see the GitHub Page for updates.`,
-			codeLink: 'https://github.com/CooperW824/WestenTechDataTool'
-		},
+		// {
+		// 	mediaType: 'picture',
+		// 	mediaSrc: '../../../assets/imgs/quikpak.png',
+		// 	mobileMediaSrc: '../../../assets/imgs/quikpak_mobile.png',
+		// 	title: 'Quikpak: A minimalist packing list for the web.',
+		// 	description: `A simple todo / packing list app for the web. 
+		// 	A simple app I made in a few hours to test the skills I learned at my internship with
+		// 	TechSlice and to explore per-user access in DynamoDB along with basic data relationship modeling.`,
+		// 	codeLink: 'https://github.com/CooperW824/quikpak',
+		// 	links: [
+		// 		{
+		// 			href: 'https://quikpak.cooperw.tech',
+		// 			text: 'Check it out on its website.'
+		// 		}
+		// 	]
+		// },
+		// {
+		// 	mediaType: 'picture',
+		// 	mediaSrc: '../../../assets/imgs/WFC_Circuit.png',
+		// 	mobileMediaSrc: '../../../assets/imgs/WFC_Circuit_Mobile.png',
+		// 	title: 'Wave Function Collapse: Procedural Image Generation using Physics.',
+		// 	description: `Using principles borrowed from quantum mechanics, Wave Function Collapse generates images by splitting up, and 
+		// 	recursively determining (collapsing) each chunk of an image based on the 
+		// 	value of the surrounding chunks.`,
+		// 	codeLink: 'https://github.com/CooperW824/wave-function-collapse',
+		// 	links: [
+		// 		{
+		// 			href: 'https://wfc.cooperw.tech',
+		// 			text: 'Mess Around with the Web Project'
+		// 		},
+		// 		{
+		// 			href: 'https://github.com/mxgmn/WaveFunctionCollapse',
+		// 			text: 'Original Algorithm by mgxmn'
+		// 		}
+		// 	]
+		// },
+		// {
+		// 	mediaType: 'picture',
+		// 	mobileMediaSrc: '../../../assets/imgs/WTDTMobile.png',
+		// 	mediaSrc: '../../../assets/imgs/WTDT.png',
+		// 	title: 'Western Tech Data Tool: A Simpler way to Visualize Data.',
+		// 	description: `A data visualization and analysis tool built with Python, PyQT, and Pandas. 
+		// 		I designed the tool to make it easier for students to make, analyze and save data charts.
+		// 		The tool is a work in progress, see the GitHub Page for updates.`,
+		// 	codeLink: 'https://github.com/CooperW824/WestenTechDataTool'
+		// },
 		// {
 		// 	mediaType: 'picture',
 		// 	mobileMediaSrc: '../../../assets/imgs/PiApproxMobile.png',
@@ -161,5 +171,5 @@ export class MyProjectsComponent implements OnInit {
 	faLaptopCode = faLaptopCode;
 	faGitHub = faGithub;
 
-	ngOnInit(): void {}
+	ngOnInit(): void { }
 }
