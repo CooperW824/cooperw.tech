@@ -1,95 +1,92 @@
 <div
-	class="flex flex-col justify-between h-screen bg-coop-background flex-grow-0 flex-shrink basis-auto"
->
-	<coop-nav-bar class="h-16 w-full"></coop-nav-bar>
+  class="flex flex-col justify-between h-screen bg-coop-background flex-grow-0 flex-shrink basis-auto"
+  >
+  <coop-nav-bar class="h-16 w-full"></coop-nav-bar>
 
-	<div
-		class="flex flex-col items-center justify-around w-full bg-coop-background font-round px-4 flex-grow flex-shrink basis-auto"
-	>
-		<h1 class="text-4xl text-coop-highlight w-full text-center mt-2">
-			My Experience Brings Value from Day One.
-		</h1>
-		<div
-			class="w-full lg:w-4/5 xl:w-2/3 h-5/6 min-h-fit flex flex-col sm:flex-row items-center justify-start my-4"
-		>
-			<div
-				class="jobs-list w-11/12 sm:w-1/5 min-h-fit h-24 sm:h-full mb-2 sm:my-0 flex sm:flex-col items-center justify-around flex-wrap"
-			>
-				<div
-					*ngFor="let job of jobs"
-					id="{{ job.buttonName }}Button"
-					class="job-button text-center text-coop-text-header w-1/4 min-w-fit sm:w-fit p-1 m-1 text-xl hover:bg-coop-highlight hover:bg-opacity-25 sm:py-2 rounded-lg transition-all duration-75 flex items-center justify-center"
-					(click)="open(job.buttonName)"
-				>
-					<h1>{{ job.buttonName }}</h1>
-				</div>
-			</div>
-			<div
-				class="w-full sm:w-3/4 min-h-fit h-full border-2 border-coop-highlight rounded-lg flex items-center justify-start pb-2"
-			>
-				<div
-					*ngFor="let job of jobs"
-					id="{{ job.buttonName }}Display"
-					class="hidden flex-col items-center justify-center w-full h-full"
-				>
-					<h1
-						class="text-2xl phone:text-3xl w-full text-center text-coop-text-header font-semibold mt-2"
-					>
-						{{ job.title }}
-					</h1>
+  <div
+    class="flex flex-col items-center justify-around w-full bg-coop-background font-round px-4 flex-grow flex-shrink basis-auto"
+    >
+    <h1 class="text-4xl text-coop-highlight w-full text-center mt-2">
+      My Experience Brings Value from Day One.
+    </h1>
+    <div
+      class="w-full lg:w-4/5 xl:w-2/3 h-5/6 min-h-fit flex flex-col sm:flex-row items-center justify-start my-4"
+      >
+      <div
+        class="jobs-list w-11/12 sm:w-1/5 min-h-fit h-24 sm:h-full mb-2 sm:my-0 flex sm:flex-col items-center justify-around flex-wrap"
+        >
+        @for (job of jobs; track job) {
+          <div
+            id="{{ job.buttonName }}Button"
+            class="job-button text-center text-coop-text-header w-1/4 min-w-fit sm:w-fit p-1 m-1 text-xl hover:bg-coop-highlight hover:bg-opacity-25 sm:py-2 rounded-lg transition-all duration-75 flex items-center justify-center"
+            (click)="open(job.buttonName)"
+            >
+            <h1>{{ job.buttonName }}</h1>
+          </div>
+        }
+      </div>
+      <div
+        class="w-full sm:w-3/4 min-h-fit h-full border-2 border-coop-highlight rounded-lg flex items-center justify-start pb-2"
+        >
+        @for (job of jobs; track job) {
+          <div
+            id="{{ job.buttonName }}Display"
+            class="hidden flex-col items-center justify-center w-full h-full"
+            >
+            <h1
+              class="text-2xl phone:text-3xl w-full text-center text-coop-text-header font-semibold mt-2"
+              >
+              {{ job.title }}
+            </h1>
+            <p class="text-coop-text-paragraph">&#64; {{ job.company }}</p>
+            <p class="text-coop-text-paragraph">
+              {{ job.timeline }}
+            </p>
+            <div
+              class="w-10/12 min-h-[2px] my-2 bg-coop-text-paragraph"
+            ></div>
+            <h1
+              class="text-xl phone:text-2xl w-full text-center text-coop-text-header font-semibold"
+              >
+              Roles and Responsibilities
+            </h1>
+            <ul
+              class="text-coop-text-paragraph w-11/12 text-center list-inside list-disc"
+              >
+              @for (role of job.keyRoles; track role) {
+                <li>
+                  {{ role }}
+                </li>
+              }
+            </ul>
+            <div
+              class="w-10/12 min-h-[2px] my-2 bg-coop-text-paragraph"
+            ></div>
+            <h1
+              class="text-xl phone:text-2xl w-full text-center text-coop-text-header font-semibold"
+              >
+              Key Skills
+            </h1>
+            <div
+              class="flex items-center justify-center w-11/12 phone:w-10/12 my-1 flex-wrap"
+              >
+              @for (skill of job.skills; track skill) {
+                <p
+                  class="bg-coop-text-paragraph py-2 rounded-md font-bold px-1 w-fit text-center my-1 mx-2 min-w-[75px]"
+                  >
+                  {{ skill }}
+                </p>
+              }
+            </div>
+            <div
+              class="w-10/12 min-h-[2px] my-2 bg-coop-text-paragraph"
+            ></div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
 
-					<p class="text-coop-text-paragraph">&#64; {{ job.company }}</p>
-
-					<p class="text-coop-text-paragraph">
-						{{ job.timeline }}
-					</p>
-
-					<div
-						class="w-10/12 min-h-[2px] my-2 bg-coop-text-paragraph"
-					></div>
-					<h1
-						class="text-xl phone:text-2xl w-full text-center text-coop-text-header font-semibold"
-					>
-						Roles and Responsibilities
-					</h1>
-					<ul
-						class="text-coop-text-paragraph w-11/12 text-center list-inside list-disc"
-					>
-						<li *ngFor="let role of job.keyRoles">
-							{{ role }}
-						</li>
-					</ul>
-
-					<div
-						class="w-10/12 min-h-[2px] my-2 bg-coop-text-paragraph"
-					></div>
-
-					<h1
-						class="text-xl phone:text-2xl w-full text-center text-coop-text-header font-semibold"
-					>
-						Key Skills
-					</h1>
-
-					<div
-						class="flex items-center justify-center w-11/12 phone:w-10/12 my-1 flex-wrap"
-					>
-						<p
-							*ngFor="let skill of job.skills"
-							class="bg-coop-text-paragraph py-2 rounded-md font-bold px-1 w-fit text-center my-1 mx-2 min-w-[75px]"
-						>
-							{{ skill }}
-						</p>
-					</div>
-
-					<div
-						class="w-10/12 min-h-[2px] my-2 bg-coop-text-paragraph"
-					></div>
-					
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<coop-card-bar class="hidden sm:flex h-56 w-full"></coop-card-bar>
-	<coop-footer class="w-full"></coop-footer>
+  <coop-card-bar class="hidden sm:flex h-56 w-full"></coop-card-bar>
+  <coop-footer class="w-full"></coop-footer>
 </div>
