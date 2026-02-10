@@ -13,17 +13,56 @@ interface experience {
 	title: string;
 	keyRoles: string[];
 	skills: string[];
-	
+
 }
 
 @Component({
-    selector: 'coop-work-experience',
-    templateUrl: './work-experience.component.html',
-    styleUrls: ['./work-experience.component.css'],
-    standalone: false
+	selector: 'coop-work-experience',
+	templateUrl: './work-experience.component.html',
+	styleUrls: ['./work-experience.component.css'],
+	standalone: false
 })
 export class WorkExperienceComponent implements OnInit {
 	jobs: experience[] = [
+		{
+			buttonName: 'Hardware Engineering Contractor',
+			company: 'Independent Contractor',
+			timeline: 'November 2025 - January 2026',
+			title: 'Hardware Design Engineer',
+			keyRoles: [
+				"Designed a 4-layer PCB containing an STM32, high-fidelity ADCs, and Ethernet connectivity.",
+				"Managed a BOM of 300+ components, performing Design for Manufacturing (DFM) reviews reducing production lead times by 10%.",
+				"Implemented controlled impedance differential pairs for Ethernet and USB interfaces, ensuring signal integrity for data rates exceeding 100 Mbps."
+			],
+			skills: [
+				"PCB Design",
+				"STM32",
+				"High-Speed Digital Design",
+				"Design for Manufacturing (DFM)",
+				"Ethernet",
+				"ADC",
+				"KiCAD",
+			].sort()
+		},
+		{
+			buttonName: `Corning Incoporated`,
+			company: 'Corning Incorporated - Advanced Optics',
+			timeline: 'June 2025 - August 2025',
+			title: 'Metrology Software Engineering Intern',
+			keyRoles: [
+				"Optimized image processing algorithms used in measuring spherical optics, reducing the time taken to measure an optic by 50%.",
+				"Implemented a PID controller to monitor and correct metrology system alignment, improving accuracy by 10%",
+				"Communicated my work to 100+ other engineers in a brief and effective presentation.",
+			],
+			skills: [
+				"Python",
+				"Control Systems",
+				"Image Processing",
+				"Metrology",
+				"Git",
+				"GitLab",
+			].sort()
+		},
 		{
 			buttonName: 'Paraxial Technologies',
 			company: 'Paraxial Technologies',
@@ -65,7 +104,7 @@ export class WorkExperienceComponent implements OnInit {
 				'TailwindCSS',
 				'AWS Lambda',
 				'AWS DynamoDB',
-				'AWS AppSync', 
+				'AWS AppSync',
 				'Terraform',
 				'Nuxt 3',
 				'AWS Batch',
@@ -73,34 +112,13 @@ export class WorkExperienceComponent implements OnInit {
 				'WebAuthn / Passkey MFA'
 			].sort()
 		},
-		{
-			buttonName: 'SMR',
-			company: 'Software, Magic, and Rainbows',
-			title: 'Software Engineering Intern',
-			keyRoles: [
-				'Develop plugins designed to read USB data for hobbits',
-				'Give weekly updates about my progress on my plugins',
-				'Deploy my code using Git, GitHub, and GitHub Actions'
-			],
-			timeline: 'June 2021 - August 2021',
-			skills: [
-				'QT',
-				'C++',
-				'Git',
-				'GitHub',
-				'Linux',
-				'GCC',
-				'GDB',
-				'USB'
-			].sort(),
-		}
 	];
 
-	previousButton: string = `${this.jobs[0].company}Button`;
-	previousWorkDisplay: string = `${this.jobs[0].company}Display`;
-	constructor() {}
+	previousButton: string = `${this.jobs[0].buttonName}Button`;
+	previousWorkDisplay: string = `${this.jobs[0].buttonName}Display`;
+	constructor() { }
 
-	ngOnInit(): void {}
+	ngOnInit(): void { }
 
 	ngAfterViewChecked(): void {
 		let buttonElm = document.getElementById(this.previousButton);
