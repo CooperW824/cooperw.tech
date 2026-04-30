@@ -18,10 +18,10 @@ import { faBuilding } from '@fortawesome/free-regular-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { Router } from '@angular/router';
 @Component({
-    selector: 'coop-nav-bar',
-    templateUrl: './nav-bar.component.html',
-    styleUrls: ['./nav-bar.component.css'],
-    standalone: false
+	selector: 'coop-nav-bar',
+	templateUrl: './nav-bar.component.html',
+	styleUrls: ['./nav-bar.component.css'],
+	standalone: false
 })
 export class NavBarComponent implements OnInit {
 	faList = faBars;
@@ -53,7 +53,16 @@ export class NavBarComponent implements OnInit {
 		this.mobileMenu?.classList.toggle('hidden');
 	}
 
-	toPage(route: '' | 'about' | 'projects' | 'experience' | 'contact' | 'resume'): void {
+	toPage(
+		route:
+			| ''
+			| 'about'
+			| 'projects'
+			| 'experience'
+			| 'contact'
+			| 'resume'
+			| 'research'
+	): void {
 		this.mobileMenu?.classList.toggle('hidden');
 		this.router.navigateByUrl(route);
 	}
