@@ -1,0 +1,118 @@
+<div class="flex flex-col justify-between h-screen bg-coop-background flex-grow-0 flex-shrink basis-auto items-center">
+  <coop-nav-bar class="h-16 w-full"></coop-nav-bar>
+
+  <div
+    class="flex flex-col w-full items-center justify-center bg-coop-background font-round h-fit p-4 flex-grow flex-shrink basis-auto">
+    <div class="w-5/6 h-fit flex items-center justify-center font-round font-semibold my-4">
+      <h1 class="text-4xl text-center text-coop-highlight">
+        Research Projects
+      </h1>
+    </div>
+
+    <!-- Desktop Research Display -->
+    <div
+      class="hidden md:flex flex-col items-center w-5/6 bg-coop-background font-round h-fit p-4 flex-grow flex-shrink basis-auto gap-8">
+      @for (project of researchProjects; track project) {
+      <div
+        class="flex flex-col w-full bg-gradient-to-b from-coop-text-header to-slate-500 rounded-lg shadow-lg shadow-coop-highlight p-6 gap-3">
+
+        <!-- Title Row -->
+        <div class="flex flex-col gap-1">
+          <h2 class="text-2xl font-bold">{{ project.title }}</h2>
+          @if (project.authors) {
+          <p class="text-base text-coop-text-dark italic">{{ project.authors }}</p>
+          }
+          @if (project.venue) {
+          <span
+            class="self-start text-sm font-semibold px-3 py-1 rounded-full bg-coop-highlight text-black">{{ project.venue }}</span>
+          }
+        </div>
+
+        <!-- Abstract -->
+        <div class="border-t border-coop-text-dark/30 pt-3">
+          <h3 class="text-sm font-semibold uppercase tracking-wide text-coop-text-dark mb-1">Abstract</h3>
+          <p class="text-base text-coop-text-dark leading-relaxed">{{ project.abstract }}</p>
+        </div>
+
+        <!-- Links Row -->
+        <div class="flex items-center gap-6 pt-2 border-t border-coop-text-dark/30">
+          @if (project.paperLink) {
+          <a href="{{ project.paperLink }}" aria-label="Read the paper"
+            class="flex items-center gap-2 text-coop-text-dark hover:underline">
+            <fa-icon [icon]="faFileLines" size="lg"></fa-icon>
+            <span class="text-lg font-bold">Read Paper</span>
+          </a>
+          }
+          @if (project.codeLink && project.codeLink !== 'Not Publicly Available') {
+          <a href="{{ project.codeLink }}" aria-label="View Source Code on GitHub"
+            class="flex items-center gap-2 text-coop-text-dark hover:underline">
+            <fa-icon [icon]="faGitHub" size="lg"></fa-icon>
+            <span class="text-lg font-bold">Source Code</span>
+          </a>
+          } @else if (project.codeLink === 'Not Publicly Available') {
+          <div class="flex items-center gap-2 text-coop-text-dark opacity-60">
+            <fa-icon [icon]="faGitHub" size="lg"></fa-icon>
+            <span class="text-lg font-bold">Source Not Available</span>
+          </div>
+          }
+        </div>
+
+      </div>
+      }
+    </div>
+
+    <!-- Mobile Research Display -->
+    <div
+      class="flex md:hidden flex-col items-center w-full bg-coop-background font-round h-fit p-4 flex-grow flex-shrink basis-auto gap-6">
+      @for (project of researchProjects; track project) {
+      <div
+        class="flex flex-col w-full bg-gradient-to-b from-coop-text-header to-slate-500 rounded-lg shadow-lg shadow-coop-highlight p-4 gap-3">
+
+        <!-- Title Row -->
+        <div class="flex flex-col gap-1 items-center text-center">
+          <h2 class="text-xl font-bold">{{ project.title }}</h2>
+          @if (project.authors) {
+          <p class="text-sm text-coop-text-dark italic">{{ project.authors }}</p>
+          }
+          @if (project.venue) {
+          <span
+            class="text-sm font-semibold px-3 py-1 rounded-full bg-coop-highlight text-black">{{ project.venue }}</span>
+          }
+        </div>
+
+        <!-- Abstract -->
+        <div class="border-t border-coop-text-dark/30 pt-3">
+          <h3 class="text-sm font-semibold uppercase tracking-wide text-coop-text-dark mb-1 text-center">Abstract</h3>
+          <p class="text-base text-coop-text-dark leading-relaxed text-center">{{ project.abstract }}</p>
+        </div>
+
+        <!-- Links Row -->
+        <div class="flex items-center justify-around pt-2 border-t border-coop-text-dark/30">
+          @if (project.paperLink) {
+          <a href="{{ project.paperLink }}" aria-label="Read the paper"
+            class="flex items-center gap-2 text-coop-text-dark hover:underline">
+            <fa-icon [icon]="faFileLines" size="lg"></fa-icon>
+            <span class="text-lg font-bold">Read Paper</span>
+          </a>
+          }
+          @if (project.codeLink && project.codeLink !== 'Not Publicly Available') {
+          <a href="{{ project.codeLink }}" aria-label="View Source Code on GitHub"
+            class="flex items-center gap-2 text-coop-text-dark hover:underline">
+            <fa-icon [icon]="faGitHub" size="lg"></fa-icon>
+            <span class="text-lg font-bold">Source Code</span>
+          </a>
+          } @else if (project.codeLink === 'Not Publicly Available') {
+          <div class="flex items-center gap-2 text-coop-text-dark opacity-60">
+            <fa-icon [icon]="faGitHub" size="lg"></fa-icon>
+            <span class="text-lg font-bold">Source Not Available</span>
+          </div>
+          }
+        </div>
+
+      </div>
+      }
+    </div>
+  </div>
+
+  <coop-footer class="w-full"></coop-footer>
+</div>

@@ -14,6 +14,7 @@ import { MyProjectsComponent } from './pages/my-projects/my-projects.component';
 import { ContactMeComponent } from './pages/contact-me/contact-me.component';
 import { WorkExperienceComponent } from './pages/work-experience/work-experience.component';
 import { ResumeComponent } from './pages/resume/resume.component';
+import { ResearchProjectsComponent } from './pages/research-projects/research-projects.component';
 
 @NgModule({
 	declarations: [
@@ -26,7 +27,8 @@ import { ResumeComponent } from './pages/resume/resume.component';
 		MyProjectsComponent,
 		ContactMeComponent,
 		WorkExperienceComponent,
-  ResumeComponent
+		ResumeComponent,
+		ResearchProjectsComponent
 	],
 	imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
 	providers: [],
